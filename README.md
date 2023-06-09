@@ -59,7 +59,7 @@
 
 ## Extra
 
-Payload Rest Example:
+Payload Rest Example (not from conventioning):
 
 Success with list:
 ```
@@ -97,3 +97,14 @@ Error:
     ]
 }
 ```
+
+## GraphQL
+- Good for queries from front-enders
+- However, only a few people use it
+- It is a RPC with a default procedure providing a query language
+- A call in a format that the server can understand that requires only the fields that you want
+- Good for BFF (Backend for frontend) 
+- Created by Facebook
+- for go language:  https://gqlgen.com/
+
+## 
