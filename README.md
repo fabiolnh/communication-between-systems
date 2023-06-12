@@ -107,4 +107,28 @@ Error:
 - Created by Facebook
 - for go language:  https://gqlgen.com/
 
-## 
+## gRPC
+- It is a framework created by Google, but maintained by CNCF (Cloud Native Computing Foundation)
+- More secure and Fast than Rest
+- Language Independent
+- Good for microservices
+- There is a web project, but it is not mature enough to use in frontend
+- In some languages, you can generate the code for GRPC
+- Bidirectional Streaming using HTTP/2 (it creates a channel to communicate)
+- Protocol Buffer (Protobuf): 
+    - A binary file (smaller than a json)
+    - The serialization is faster (it uses a binary file, different than a json)
+    - Less traffic resources
+    - Faster process (http2 and smaller file)
+- Profo File (Protofile):
+    - A file declaring the contract between the communication
+    - It is a .proto
+ - HTTP/2:
+    - Launched in 2015
+    - The data traffic is binary (HTTP 1.1 is text)
+    - Use the same TCP connection to receive or send the data (Multiplex): Open the connection, send and receive whatever you want, and then you close the connection
+    - It is good to check if your application is using Http2, because it is very good
+    - Server Push (In the server, you can send information to the frontend)
+    - Headers as compressed
+    - Less network resources
+    - Faster
