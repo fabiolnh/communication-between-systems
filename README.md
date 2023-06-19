@@ -123,7 +123,7 @@ Error:
 - Profo File (Protofile):
     - A file declaring the contract between the communication
     - It is a .proto
- - HTTP/2:
+- HTTP/2:
     - Launched in 2015
     - The data traffic is binary (HTTP 1.1 is text)
     - Use the same TCP connection to receive or send the data (Multiplex): Open the connection, send and receive whatever you want, and then you close the connection
@@ -132,3 +132,17 @@ Error:
     - Headers as compressed
     - Less network resources
     - Faster
+- Communication Format:
+    1) Unary: Request -> Response
+    2) Server Streaming: Request -> Response (however, you can receive a lot of responses at the same time. Ex: percentage of a calc)
+    3) Client Streaming: Request -> Response (however, you can send a lot of requests and receive one response)
+    4) Bi Directional Streaming: Request -> Response (however, you can send a lot of requests and receive a lot of responses)
+- Difference between REST and gRPC:
+    - Rest: Text/Json, Unidirectional, High Latency, No Contract (higher error chance), no streaming support, pre-defined design (post, put, get, delete).
+    - gRPC: Protocol Buffers, Bidirectional and Async, Low Latency, Defined Contract, Streaming Support, free design, code generation.
+- Difference between gRPC and Proto Buffers (Together you can work with gRPC)
+    - Protobuff: https://protobuf.dev/
+    - gRPC: https://grpc.io/about/
+
+## Service Discovery and Consul
+- 
