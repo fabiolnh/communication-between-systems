@@ -1,4 +1,4 @@
-# Communication between Systems - REST, GRPC, GraphQL, Service Discovery, Consul (Currently Studying)
+# Communication between Systems - REST, GRPC, GraphQL, and Service Discovery (Currently Studying)
 
 ## Synchronous Communication: 
 - Real Time
@@ -144,5 +144,17 @@ Error:
     - Protobuff: https://protobuf.dev/
     - gRPC: https://grpc.io/about/
 
-## Service Discovery and Consul
-- 
+## Service Discovery
+- Which machine should we call? Which port to use? Do we need to know the instance IP? How to be sure that the instance is healthy? How to know that we have permission to access?
+- These are some questions that the service discovery can answer. When we have more than one service identically, what should you do?
+- It figures out the machines available to access (the health ones)
+- Segmentation of machines to guarantee security (how machines will access others, and what rules some machines should have to access or not other)
+- DNS resolution
+- Active Health Check (time to time is checked)
+- Tool: Consul (By Hashicorp)
+    - Agnostic to programming language
+    - Load Balancing (Layer 7)
+    - Service Segmentation
+    - Key/Value Configuration (Secrets, env variables, etc)
+    - Security: Mutual TLS, Service Mesh, etc.
+    - Service Registry: 
