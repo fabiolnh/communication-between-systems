@@ -157,4 +157,15 @@ Error:
     - Service Segmentation
     - Key/Value Configuration (Secrets, env variables, etc)
     - Security: Mutual TLS, Service Mesh, etc.
-    - Service Registry: 
+    - Service Registry: the place where we have all the services registered.
+    - The health check is done locally. The consul that is running in the app send this information to the Consul Server
+    - The Consul has its own DNS Server
+    - Active Health Check: The consul has an Agent in each service. It informs the Consul Server its availability (The consul server does not verify the server, it is the opposite: the agent warns the consul server)
+    - Multi Cloud: You can create a communication among Clouds through Consul
+    - Agent: A process that is executed in every cluster node. It can be Client mode or Server Mode.
+    - Client: Register the service locally, health check and forward the information and configuration to the Server
+    - Server: Commonly, there are more than one server and there is one server leader. Features: keep the cluster state, register the services that were informed by the clients, membership (who is the client and who is the server), return of queries (DNS or API), exchange information between datacenter, etc.
+    - Dev Mode Feature: simulate a server in consul (just to test, not for production, run as a server, do not scale, register everything in memory)
+    - OBS: You have to set up an Agent (Client) to each service that you will deploy (to communicate with the servers).
+    - OBS: you can communicate to the server through the client (requests to the client you can get information from the server, because everything is synchronized)
+    - 
