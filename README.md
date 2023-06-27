@@ -33,6 +33,9 @@
 - Use all the http verbs, including cache
 - Provide relational links exemplifying the resources of what could be done with it
 
+- Status ACCEPTED: Return it when there is an assyncronous treatment, and create other endpoint to know about the its status (ex: the progress)
+- Status NO_CONTENT: Return it when there is no payload and there is a success return
+-     
 - Method Negotiation:
     - OPTIONS: check what methods (verbs) can be used with that resource
 - Content Negotiation: (how the client wants the answer from the server)
