@@ -1,4 +1,4 @@
-# Communication between Systems - REST, GRPC, GraphQL, and Service Discovery (Currently Studying)
+# Communication between Systems - REST, GRPC, GraphQL, and Service Discovery
 
 ## Synchronous Communication: 
 - Real Time
