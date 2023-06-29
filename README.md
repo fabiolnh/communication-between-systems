@@ -171,4 +171,6 @@ Error:
     - Dev Mode Feature: simulate a server in consul (just to test, not for production, run as a server, do not scale, register everything in memory)
     - OBS: You have to set up an Agent (Client) to each service that you will deploy (to communicate with the servers).
     - OBS: you can communicate to the server through the client (requests to the client you can get information from the server, because everything is synchronized)
-    - 
+    - parameter "encrypt": You have to execute "consul keygen" and put the value in all the "servers.json". This way all the communication will be encrypted. All the servers have to have the encrypt to join with each other. Also, in production you have to work with TLS, too.
+    - Interface to manage all the consul resources: access the "consulserver01:8500"
+    - OBS: Kubernetes has its own Service Discovery 
