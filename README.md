@@ -105,37 +105,42 @@ Table For Application Exception:
 
 ```
 
-|   ID  |   HTTP Status Code           |   Cenário(s)                           |   Mensagem                                                      |   API  |   SDK  |   ION API  |
-|-------|------------------------------|----------------------------------------|-----------------------------------------------------------------|--------|--------|------------|
-|   1   |   500 Internal Server Error  |   Erros não mapeado (ex: nullpointer)  |   We could not handle your request, please try again later.     |   Sim  |   Sim  |   Sim      |
-|   2   |   503 Service Unavailable    |   Indisponibilidade da plataforma      |   Service unavailable. We are currently working to restore it.  |   Sim  |   CeR  |   Sim      |
-|       |                              |                                        |                                                                 |        |        |            |
+|   ID  |   HTTP Status Code           |   Cenário(s)                           |   Mensagem
+|
+|-------|------------------------------|----------------------------------------|-----------------------------------------------------------------
+|
+|   1   |   500 Internal Server Error  |   Erros não mapeado (ex: nullpointer)  |   We could not handle your request, please try again later.
+|
+|   2   |   503 Service Unavailable    |   Indisponibilidade da plataforma      |   Service unavailable. We are currently working to restore it.
+|
+|       |                              |                                        |
+|
 
 ```
 
 Table for Business Exception:
 
 ```
-|   ID   |   HTTP Status Code  |   Cenário(s)                                           |   Mensagem                                                                                                        |   API  |   SDK  |   ION API  |
-|--------|---------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|--------|--------|------------|
-|   101  |   400 bad request   |   Atributo obrigatório                                 |   Mandatory field '{0}' not informed.                                                                             |   Sim  |   CeR  |   Sim      |
-|   102  |   400 bad request   |   Data inválida                                        |   Start date entered in the field '{0}' greater than current date.                                                |   Sim  |   CeR  |   Sim      |
-|   103  |   400 bad request   |   Data inválida                                        |   Error on validate date range, 'from' parameter date is later than 'to' parameter date, should be the opposite.  |   Sim  |   CeR  |   Sim      |
-|   104  |   400 bad request   |   Data inválida                                        |   Invalid date format in field '{0}'. Format accepted: yyyy-MM-dd                                                 |   Sim  |   CeR  |   Sim      |
-|   105  |   400 bad request   |   Data inválida                                        |   Invalid date entered in the field '{0}'.                                                                        |   Sim  |   CeR  |   Sim      |
-|   106  |   400 bad request   |   Atributo obrigatório                                 |   When informing a search range, both fields 'from' and 'to' are mandatory.                                       |   Sim  |   CeR  |   Sim      |
-|   107  |   400 bad request   |   String mal formada                                   |   Field: '{0}' is a string and must be entered between quotation marks.                                           |   Sim  |   CeR  |   Sim      |
-|   108  |   404 Not found     |   ExternalIdentifier não existe                        |   Data not found. '{0}'                                                                                           |   Sim  |   CeR  |   Sim      |
-|   109  |   404 Not found     |   Valor máximo excedido                                |   Maximum value for '{0}' should be lower than or equal to '{1}'.                                                 |   Sim  |   CeR  |   Sim      |
-|   110  |   404 Not found     |   Valor mínimo excedido                                |   Minimum value for '{0}' should be greater than or equal to '{1}'.                                               |   Sim  |   CeR  |   Sim      |
-|   111  |   400 bad request   |   Tipo de dado inválido                                |   Field: '{0}' should be an integer.                                                                              |   Sim  |   CeR  |   Sim      |
-|   112  |   400 bad request   |   Tipo de argumento inválido                           |   Argument type invalid '{0}'.                                                                                    |   Sim  |        |            |
-|   113  |   400 bad request   |   externalIdentifier ou institutionId não informado    |   Must inform at least one of the following: externalIdentifier or institutionId                                  |   Sim  |        |            |
-|   114  |   400 bad request   |   Valores de paginação fora do limite                  |   Pagination values too large.                                                                                    |   Sim  |        |            |
-|   115  |   400 bad request   |   Valores de paginação com caracteres sem ser números  |   Incorrect input paging value, try using numbers only.                                                           |   Sim  |        |            |
-|   116  |   400 bad request   |   Dado já existente                                    |   Data already exists.                                                                                            |   Sim  |        |            |
-|   117  |   400 bad request   |   connectionId ou externalIdentifier não informado     |   Must inform at least one of the following: connectionId or externalIdentifier.                                  |   Sim  |        |            |
-|   401  |   401 unauthorized  |   Token Inválido ou expirado                           |   Unauthorized.                                                                                                   |        |        |            |
+|   ID   |   HTTP Status Code  |   Cenário(s)                                           |   Mensagem                                                                                                        
+|--------|---------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------
+|   101  |   400 bad request   |   Atributo obrigatório                                 |   Mandatory field '{0}' not informed.                                                                             
+|   102  |   400 bad request   |   Data inválida                                        |   Start date entered in the field '{0}' greater than current date.                                                
+|   103  |   400 bad request   |   Data inválida                                        |   Error on validate date range, 'from' parameter date is later than 'to' parameter date, should be the opposite.  
+|   104  |   400 bad request   |   Data inválida                                        |   Invalid date format in field '{0}'. Format accepted: yyyy-MM-dd                                                 
+|   105  |   400 bad request   |   Data inválida                                        |   Invalid date entered in the field '{0}'.                                                                        
+|   106  |   400 bad request   |   Atributo obrigatório                                 |   When informing a search range, both fields 'from' and 'to' are mandatory.                                       
+|   107  |   400 bad request   |   String mal formada                                   |   Field: '{0}' is a string and must be entered between quotation marks.                                           
+|   108  |   404 Not found     |   ExternalIdentifier não existe                        |   Data not found. '{0}'                                                                                           
+|   109  |   404 Not found     |   Valor máximo excedido                                |   Maximum value for '{0}' should be lower than or equal to '{1}'.                                                 
+|   110  |   404 Not found     |   Valor mínimo excedido                                |   Minimum value for '{0}' should be greater than or equal to '{1}'.                                               
+|   111  |   400 bad request   |   Tipo de dado inválido                                |   Field: '{0}' should be an integer.                                                                              
+|   112  |   400 bad request   |   Tipo de argumento inválido                           |   Argument type invalid '{0}'.                                                                                    
+|   113  |   400 bad request   |   externalIdentifier ou institutionId não informado    |   Must inform at least one of the following: externalIdentifier or institutionId                                  
+|   114  |   400 bad request   |   Valores de paginação fora do limite                  |   Pagination values too large.                                                                                    
+|   115  |   400 bad request   |   Valores de paginação com caracteres sem ser números  |   Incorrect input paging value, try using numbers only.                                                           
+|   116  |   400 bad request   |   Dado já existente                                    |   Data already exists.                                                                                            
+|   117  |   400 bad request   |   connectionId ou externalIdentifier não informado     |   Must inform at least one of the following: connectionId or externalIdentifier.                                  
+|   401  |   401 unauthorized  |   Token Inválido ou expirado                           |   Unauthorized.                                                                                                   
 
 ```
 
