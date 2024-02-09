@@ -106,9 +106,7 @@ Table For Application Exception:
 ```
 
 |   ID  |   HTTP Status Code           |   Cenário(s)                           |   Mensagem
-|
 |-------|------------------------------|----------------------------------------|-----------------------------------------------------------------
-|
 |   1   |   500 Internal Server Error  |   Erros não mapeado (ex: nullpointer)  |   We could not handle your request, please try again later.
 |   2   |   503 Service Unavailable    |   Indisponibilidade da plataforma      |   Service unavailable. We are currently working to restore it.
 
